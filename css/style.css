@@ -1,3 +1,15 @@
+/* CSS Root Variables */
+:root {
+  --black: #333;
+  --grey: #d7d7d7;
+  --grey-muted: #c1c1c1;
+}
+
+.muted {
+  color: var(--grey-muted);
+}
+
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html, * {
   box-sizing: border-box;
@@ -11,47 +23,100 @@ html, * {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: var(--black);
+  color: var(--grey);
+}
+
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.4em;
+  margin: 1rem 0;
 }
 
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--black);
   padding: 10px;
 }
 
 .jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
+  color: var(--grey);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 2px solid var(--grey-muted);
+  height: 140px;
+  width: 100%;
+  position: relative;
 }
 
-.description {
-  white-space: pre-wrap;
+.jumbotron > * {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.time-block {
-  text-align: center;
-  border-radius: 15px;
+div#title-container {
+  left: 2rem;
 }
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
+span#current-day {
+  right: 3rem;
+  font-size: 3.4em;
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+
+
+#timeblocks-container {
+  margin-left: 0;
+  margin-top: 4rem;
+}
+
+.timeblock-row {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.hour-container,
+.saveBtn{
+  /* Forces side columns to stay same width */
+  flex: 0 0 140px;
+}
+
+.textEntry {
+  /* Lets middle column shrink/grow to available width */
+  flex: 1 1 auto;
+  margin-left: 1rem;
+  background-color: #222;
+  color: var(--grey);
+  overflow: scroll;
+  outline: none;
+}
+
+.hour-container {
+  position: relative;
+  border-right: 2px solid var(--grey-muted);
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6em;
 }
 
 .past {
@@ -70,14 +135,18 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  border: 2px solid var(--grey-muted);
+  background: var(--black);
+  color: var(--grey-muted);
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+.saveBtn i {
+  font-size: 2em;
+}
+
+.saveBtn:hover {
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);  
+  color: #fff;
+  border-color: #fff;
 }
