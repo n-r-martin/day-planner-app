@@ -20,30 +20,19 @@
 
   <body>
     <header class="jumbotron">
-      <div id=title-container>
-        <h1>Daily Planner</h1>
-        <p class="muted">A simple daily calendar app for scheduling your work day</p>
-      </div>
-      
-      <span id="current-day" class="lead"></span>
+        <div id=title-container>
+          <h1>Daily Planner</h1>
+          <p class="muted">A simple daily calendar app for scheduling your work day</p>
+        </div>
+        
+        <div id="current-date-time-container">
+          <p id="current-day" class="lead"></p>
+          <p id="current-time" class="lead"></p>
+        </div>
     </header>
     <div id='timeblocks-container' class="container">
-      <!-- Timeblocks go here -->
       <ul id="timeblock-list">
-        <!-- <li class="timeblock-row">
-          <div class="hour-container">
-            <span class="hour"></span>
-          </div>
-          <textarea class="textEntry"></textarea>
-          <button class='saveBtn'><i class="far fa-save"></i></button>
-        </li>
-        <li class="timeblock-row">
-          <div class="hour-container">
-            <span class="hour"></span>
-          </div>
-          <textarea class="textEntry"></textarea>
-          <button class='saveBtn'><i class="far fa-save"></i></button>
-        </li> -->
+        <!-- Timeblocks populated via JS -->
       </ul>
     </div>
 

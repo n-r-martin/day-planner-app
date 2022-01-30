@@ -33,7 +33,7 @@ body {
 h1 {
   font-family: 'Libre Baskerville', serif;
   font-size: 1.4em;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 textarea {
@@ -48,7 +48,7 @@ textarea {
   color: var(--grey);
   border-radius: 0;
   border-bottom: 2px solid var(--grey-muted);
-  height: 140px;
+  height: 100px;
   width: 100%;
   position: relative;
 }
@@ -56,29 +56,26 @@ textarea {
 .jumbotron > * {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
 }
 
 div#title-container {
   left: 2rem;
 }
 
-span#current-day {
+div#current-date-time-container {
+  text-align: right;
   right: 3rem;
-  font-size: 3.4em;
   font-family: 'Libre Baskerville', serif;
 }
 
-
-
-
 #timeblocks-container {
   margin-left: 0;
-  margin-top: 4rem;
+  margin: 4rem;
 }
 
 .timeblock-row {
-  width: 100%;
+  width: 80%;
   height: 100px;
   margin-bottom: 1rem;
   display: flex;
@@ -121,17 +118,18 @@ ul {
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: #888;
+  color: #bbb;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: hsla(248, 93%, 58%, .5);
   color: white;
 }
 
