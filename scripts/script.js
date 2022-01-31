@@ -18,7 +18,7 @@ const blockTimes = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6]
 
 // This exists only for the sake if the user does not have the textAreaValues key in their localstorage.
 // In which case, we need to see with this empty to avoid errors on functions that require some kind of parsed array from localstorage,
-// even if it is empty. If the user already has the key, then the application data is fed entirely fromlocalstorage
+// even if it is empty. If the user already has the key, then the application data is fed entirely from localstorage
 const emptyTimeblockTextObjArr = [{ "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}, { "text" : ''}]
    
 
